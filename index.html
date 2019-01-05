@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>盐城机器人学会</title>
+<style type="text/css">
+html, body, ul, li, ol, dl, dd, dt, p, h1, h2, h3, h4, h5, h6, form, fieldset, legend, img { margin:0; padding:0; } 
+fieldset, img,input,button { border:none; padding:0;margin:0;outline-style:none; }
+ul, ol { list-style:none; }
+input { padding-top:0; padding-bottom:0; font-family: "SimSun","宋体";}
+select, input { vertical-align:middle; }
+select, input, textarea { font-size:12px; margin:0; }
+textarea { resize:none; }
+img {border:0;	vertical-align:middle;}
+table { border-collapse:collapse; }
+body {
+    font:12px/150% Arial,Verdana,"\5b8b\4f53";
+    color:#666;
+    background:#fff
+}
+.clearfix:before,.clearfix:after{ 
+    content:""; 
+    display:table; 
+} 
+.clearfix:after{clear:both;} 
+.clearfix{ 
+    *zoom:1;/*IE/7/6*/ 
+} 
+a{color:#666; text-decoration:none; }
+a:hover{color:#C81623;}
+h1,h2,h3,h4,h5,h6{text-decoration:none;font-weight:normal;}
+s,i,em{font-style:normal;text-decoration:none;}
+.col-red{color: #C81623!important;}
+
+/*版心*/
+.w{
+    width: 1270px;margin:0 auto;
+}
+.header{
+	background: url(images/header_bc.jpg) no-repeat;
+	background-size: auto 150px;
+	height: 150px;
+}
+.header_ul{
+   float: right;
+}
+.header_ul ul{
+	width: 210px;
+	height: 20px;
+	color: #fff;
+	margin-top: 20px;
+	position: relative;
+}
+.header_ul li{
+	float: left;
+	padding-left: 20px;
+}
+.header_ul i,.header_ul s{
+	position: absolute;
+	top: 2px;
+	left:75px; 
+	height: 15px;
+	width: 1.5px;
+	background-color: #fff;
+}
+.header_ul s{
+	left:145px;
+}
+.header_ul a{
+	color: #fff;
+}
+.logo {
+	float: left;
+}
+.header_search{
+	float: right;
+	width: 340px;
+	height: 33px;
+	margin-top: 30px;
+}
+.search_text{
+	float: left;
+	width: 260px;
+	height: 33px;
+	padding-left: 20px;
+	background-color: #8cb7d7;
+}
+.search_button{
+	float: left;
+	width: 60px;
+	height: 33px;
+	cursor: pointer;
+	color: #b9b9b9;
+	font-size: 15px;
+	font-weight: bold;
+	background-color: #fafafa;
+}
+/*导航条*/
+.nav{
+	background-color: #19619b;
+	height: 50px;
+}
+.nav ul li{
+	float: left;
+	width: 140px;
+	height: 50px;
+	text-align: center;
+	line-height: 50px;
+}
+.nav ul li a{
+	display: block;
+	width: 140px;
+	height: 50px;
+	font-size: 20px;
+	font-weight: bold;
+	font-family: "黑体";
+	text-decoration: none;
+	color:white;
+}
+.nav ul li a:hover{
+	color: red;
+}
+/*内容开始*/
+.content{margin-top: 10px;}
+/*公告*/
+.notice{
+	height: 80px;
+	border: 1px solid red;
+}
+.notice_icon{
+   float: left;
+   height: 60px;
+   width: 60px;
+   background-color: #fad00f;
+   color: #000;
+   font-family: "黑体";
+   font-size: 22px;
+   text-align: center;
+   line-height: 30px;
+   margin:10px 50px 0 10px;
+   border-radius: 10px;
+}
+.notice_text{
+	float: left;
+	color: #0a6bd2;
+	line-height: 80px;
+	font-size: 40px;
+	font-weight: bold;
+}
+.notice_text a{
+	color: #0a6bd2;
+}
+.content_one{
+	margin-top: 10px;
+	height: 286px;
+	background-color: red;
+}
+.content_one_left_show{
+	float: left;
+	position: relative;
+}
+.content_one_left_show h3{
+	position: absolute;
+	top: 210px;
+	width: 446px; 
+	height: 50px;
+	color: #fff;
+	font-size: 20px;
+	text-align: center;
+    padding-top: 3px;
+}
+.content_one_center_new{
+	float: left;
+	margin-left: 15px;
+	width: 448px;
+	color: #fff;
+	height: 286px;
+	background-color: blue;
+}
+.content_one_right_entrance{
+	float: right;
+	color: #fff;
+	background-color: green;
+	height: 286px;
+	width:  346px;
+}
+.content_two{
+	margin-top: 10px;
+	height: 227px;
+	background-color: blue;
+}
+.content_two_left{
+	float: left;
+	margin-left: 10px;
+	background-color: red;
+	height: 227px;
+	width: 445px;
+}
+.content_two_center{
+	float: left;
+	margin-left: 10px;
+	background-color: red;
+	height: 227px;
+	width: 445px;
+}
+.content_two_right{
+	float: right;
+	color: #fff;
+	background-color: green;
+	height: 227px;
+	width:  346px;
+}
+.content_three{
+	margin-top: 10px;
+	height: 532px;
+	background-color: green;
+}
+.content_three_right{
+	float: right;
+	color: #fff;
+	background-color: blue;
+	height: 532px;
+	width:  346px;
+}
+.content_three_left_top{
+   float: left;
+   background-color: red;
+   height: 81px;
+   width: 911px;
+}
+.content_new{
+	float: left;
+	margin-top: 10px;
+	width: 911px;
+	color: #fff;
+	height: 286px;
+	background-color: blue;
+}
+.footer{
+    color: #fff;
+    font-size: 15px;
+	height: 150px;
+	background-color: #2781c6;
+	text-align: center;
+	border-top:1px solid #2781c6;
+}
+.footer_text{
+	margin-top: 40px;
+}
+.footer_text p{
+	margin-top: 10px;
+}
+.footer_text a{
+	color: #fff;
+}
+</style>
+</head>
+<body>
+  <div class="header">
+    <div class="w">
+
+  	  <div class="logo">
+  		<img src="images/logo.png">
+  	  </div>
+
+  	  <div class="header_ul">
+  	  	<ul>
+  	  	   <li><a href="#">设为首页</a></li>
+  	  	   <i></i>
+  	  	   <li><a href="#">加入收藏</a></li>
+  	  	   <s></s>
+  	  	   <li><a href="#">返回旧版</a></li>
+  	  	</ul>
+  	  </div>
+
+  	  <div class="header_search">
+  	  	 <input type="text" value="请输入检索的关键字" class="search_text"><button class="search_button">搜索</button>
+  	  </div>
+
+  	</div>
+  </div>
+<!-- 导航条 -->
+<div class="nav">
+  <div class="w">
+  	<ul>
+		<li><a href="#">首页</a></li>
+		<li><a href="#">学会公告</a></li>
+		<li><a href="#">科学前沿</a></li>
+		<li><a href="#">学会学术</a></li>
+		<li><a href="#">科学普及</a></li>
+		<li><a href="#">新闻站点</a></li>
+		<li><a href="#">考试介绍</a></li>
+		<li><a href="#">资料中心</a></li>
+		<li><a href="#">联系我们</a></li>
+	</ul>
+  </div>
+ </div>
+<!-- 内容部分 -->
+  <div class="content w">
+  	<div class="notice">
+  	   <div class="notice_icon">公告通知</div>
+  	   <div class="notice_text"><a href="#">第三届江苏省科协青年会员创新创业大赛正式启动</a></div>
+  	</div>
+  	<!-- 公告写完 -->
+  	<div class="content_one">
+  	  <div class="content_one_left_show">
+  	  	<img src="images/content.jpg" height="284px" width="446px">
+  	  	<h3>2018年6月盐城市机器人不知道什么大会开始举办举办</h3>
+  	  </div>
+  	  <div class="content_one_center_new">
+         这快些要闻快递
+  	  </div>
+  	  <div class="content_one_right_entrance">这快写走进学会</div>
+  	</div>
+  	<!-- 内容第一部分写完 -->
+  	<div class="content_two">
+  	   <div class="content_two_left"></div>
+  	   <div class="content_two_center"></div>
+  	   <div class="content_two_right"></div>
+  	</div>
+    <!-- 内容第二部分写完 -->
+    <div class="content_three">
+  	   <div class="content_three_left">
+  	   	  <div class="content_three_left_top"></div>
+  	   	  <div class="content_three_left_center">
+  	   	  </div>
+  	   </div>
+
+  	   <div class="content_three_right"></div>
+  	</div>
+    <!-- 内容第三部分写完 -->
+  </div>
+  <!-- 内容写完 -->
+  <div class="footer">
+   <div class="footer_text">
+  	<p>版权所有：江苏省盐城市机器人学会</p>
+    <p>网站维护：江苏省盐城师范学院 联系电话：18816230095</p>
+    <p><a href="#">苏ICP备17070104号</a>
+   </div>
+  </div>
+</body>
+</html>
