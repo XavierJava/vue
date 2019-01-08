@@ -1,0 +1,42 @@
+git来源：是linux作者为了管理别人对开源的linux的意见，用C语言两个星期
+写出来的一个分布式版本控制系统。
+
+GitHub：是一个开源社区，也就是一个线上服务器仓库。
+
+git操作 ：
+1.去官网下载自己电脑系统相对应的版本
+ 
+2. $ git config --global user.name "Your name"
+    $ git config --global user.email "Your email"
+——————填写你注册GitHub的邮箱和账号。让git认识你
+
+3.git init 让你的文件夹变成工作区受git管理
+
+4.git add “添加要追踪的文件”git add . 一般为了方便就直接这样写全部添加的意思
+（git会自动过滤需要添加的这里需要了解下缓存区的概念）
+
+5.git commit -m ""  这里一个是写上传的文字叙述 另一个就是将缓存区的文件上传到分支
+
+6.git push https://github.com/XavierJava/vue.git (ren) 这个是把本地仓库上传到后面指定的仓库
+（在ren的分支下）
+
+7.git branch ren  创建分支
+
+8. git checkout ren 切换到对应的分支上
+
+9.git status 查看当前工作区的状态 
+
+10.git clone https://github.com/XavierJava/（vue.git）  克隆GitHub的项目到本地（这个里面可以改线上项目名称）
+
+11. git branch -d <分支名字>；尝试删除某个分支（git会提醒）
+      git branch -D <分支名字>：强制删除某个分支
+
+12.git branch：显示当前版本库中所有分支
+
+13.git branch -m <old分支名字> <new分支名字>：尝试修改（git会提醒）
+git branch -M <old分支名字> <new分支名字>：强制修改
+
+14.git merge 合并分支 快进式（Fast Forwarld）的合并方式。（这块会解决之前版本开发的bug 这块合并相当于从
+最开始有bug的地方开始往一路都是好的方向直到项目完）
+
+15冲突的话git会提醒然后对比里面的内容 你选择删一个就行
