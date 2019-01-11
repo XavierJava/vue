@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>v-model指令实现双向数据绑定 </title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>
+</head>
+<body>
+
+  <div id="app">
+    <p>{{msg}}</p>
+    <!-- v-bind 属性修改指令 只能从m自动绑定到v 单项数据绑定 无法实现双向数据绑定 -->
+    <!-- <input type="text" :value="msg" style="width:100%;"> -->
+
+    <!-- v-model实现了双向数据绑定 v可以到m  m也可以到v  只能运用到表单元素当中 -->
+    <input type="text" :value="msg" style="width:100%;" v-model="msg"> 
+  </div> 
+
+
+  <script type="text/javascript">
+    var vm = new Vue({
+    	el : "#app",
+    	data : {
+        msg : "我草你妈，老子腰好疼！！！"
+      },
+    	methods : {}
+    })
+  </script>
+</body>
+</html>

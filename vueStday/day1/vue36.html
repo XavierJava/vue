@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>	
+</head>
+<body>
+  
+  <div class="app">
+
+   <!-- v-if就是每次重新删除和新建dom元素 -->
+   <!-- v-show就是每次进行样式的display:none; -->
+
+   <!-- 如果元素遇见频繁的切换千万别用v-if  但是如果一个元素没有被= -->
+    <input type="button" @click="flag=!flag" value="点击">
+    <h3 v-if="flag">这是v-if控制的元素</h3>
+
+    <h4 v-show="flag">这是v-show控制的元素</h4>
+
+  </div>
+
+  <script type="text/javascript">
+     var vm = new Vue({
+        el : ".app",
+
+        data : {
+          flag : false
+        },
+
+        methods : {
+          
+        }
+
+     });
+  </script>
+</body>
+</html>

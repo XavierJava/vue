@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>	
+</head>
+<body>
+  
+  <div class="app">
+  	<!-- 这是第数字循环数字是从1开始 -->
+    <!-- v-for 指令就是count就是相当于i in后面我们可以放 普通数组 对象 还可以放置数字  但是数字是从1开始-->
+    <h3 v-for="cont in 10">这是第{{cont}}次循环</h3>
+
+  </div>
+
+  <script type="text/javascript">
+     var vm = new Vue({
+        el : ".app",
+
+        data : {
+
+        },
+
+        methods : {
+          
+        }
+
+     })
+  </script>
+</body>
+</html>

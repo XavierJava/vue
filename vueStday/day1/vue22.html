@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+  <script type="text/javascript" src="lib/vue-2.4.0.js"></script>
+</head>
+<body>
+	<div id="app">
+		<input type="button" value="动起来" @click="show">
+		<input type="button" value="暂停" @click="stop">
+		<p>{{msg}}</p>
+	</div>
+
+
+<script type="text/javascript">
+  var vm = new Vue({
+    el : "#app",
+
+    data : {
+      msg : "我要吃陕西，搓搓，凉调活络。",
+      intervalId : null
+    },  
+
+    methods : {
+      
+      show () {  
+         //要想调用vm实例中的data数据alert(msg)是运行不出来的
+         //必须通过this.数据名 或者this.方法名
+
+         //**此处使用了间断函数 此处省略了var _this = this
+      if(this.intervalId != null) return;
+
+         this.intervalId = setInterval ( () => {
+         var start = this.msg.substring(0,1);
+         var end = this.msg.substring(1);
+         this.msg = end + start;
+        },400);
+      
+     
+
+      },
+
+      stop : function(){
+       clearInterval(this.intervalId);
+       this.intervalId = null;
+      }
+
+  }
+
+})
+  </script>
+</body>
+</html>

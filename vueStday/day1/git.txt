@@ -1,0 +1,20 @@
+xavier:
+git init
+
+xavier:
+ls -la
+
+xavier:
+.git
+
+xavier:
+git add .
+
+xavier:
+git commit -m '123'
+
+xavier:
+git push
+
+xavier:
+git push https:// ***.git ren

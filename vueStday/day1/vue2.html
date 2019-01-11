@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>vue第二天指令学习</title>
+<script src="./lib/vue-2.4.0.js"></script>
+<style type="text/css">
+  /*属性选择器[..]*/
+  [v-cloak] {
+    display: none;
+  }
+  [v-text] {
+     color: red;
+  }
+  /*说有css属性好像用不了。。。。*/
+</style>
+</head>
+<body>
+  <!-- 这是mvvm里面的v用户视口 -->
+  <div class="header">
+    <p v-cloak>v-cloak指令可以使用属性选择器{{msg}}前后都可以放内容解决差值表达式闪烁的问题</p>
+    <h4 v-text="msg"></h4>
+    <div v-html="msg1"></div>
+  </div>
+<!-- **********总结************ -->
+<!-- 1. v-cloak 不会覆盖原本的内容前后都可以加内容 解决闪烁问题 -->
+<!-- 2. v-text 会覆盖原本的内容只会替换自己的这个占位符 默认无闪烁 -->
+<!-- 3. v-html 会覆盖原本的内容只会替换自己的这个占位符 可以替换显示html标签 -->
+  <script type="text/javascript">
+    //导入vue的包就是创建Vue这个对象就是mvvm里面的vm
+    var vm = new Vue({
+     //el控制v的元素 
+     el : '.header',
+     
+     //下面这个是mvvm里面的m
+     data : {
+     	msg : '123',
+      msg1 : '<h1>456</h1>'
+     }
+
+    })
+  </script>
+</body>
+</html>

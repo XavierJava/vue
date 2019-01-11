@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>	
+</head>
+<body>
+  
+  <div class="app">
+  	
+    <h3 v-for="i in list">{{list}}</h3>
+
+  </div>
+
+  <script type="text/javascript">
+     var vm = new Vue({
+        el : ".app",
+
+        data : {
+           list : [
+               {id : 1, name : "任伦"},
+               {id : 2, name : "田甜"},
+               {id : 3, name : "来了"}
+
+           ]
+        },
+
+        methods : {
+          
+        }
+
+     })
+  </script>
+</body>
+</html>

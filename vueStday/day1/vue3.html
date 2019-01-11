@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>
+ 
+  <style type="text/css">
+    .red{
+    	color: red;
+    }
+    .font{
+    	font-size: 10px;
+    }
+    .active{
+    	letter-spacing: 0.5em;  
+    	/*设置字符的字间距*/
+    }
+
+  </style>
+
+</head>
+<body>
+
+    <div class="header" @click="show">
+      <!-- 第一种是使用数组不方便 交普通写法 -->
+      <h1 :class="['red','active']">{{msg}}</h1>
+      <!-- 第二种写法就是三元运算符写法 -->
+      <h1 :class="['red','active',flag?'font':'']">{{msg}}</h1>
+      <!-- 第三种写法 通过对象写法代替三元表达式-->
+      <h1 :class="['red','active',{'font':flag}]">{{msg}}</h1>
+      <!-- 第四种写法 直接使用对象写 -->
+      <h1 :class="classObj">{{msg}}</h1>
+    </div>
+
+
+
+ <script type="text/javascript">
+   var vm = new Vue({
+      el : ".header",
+
+      data : {
+      	msg : "年大家好啊",
+      	flag : true,
+      	classObj : "red : true , active : false ,font : true"
+      },
+
+      methods : {
+          show() {
+          	console.log(1);
+          }
+      }
+
+   }); 
+ </script>
+</body>
+</html>

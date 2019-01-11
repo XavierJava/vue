@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<script type="text/javascript" src='./lib/vue-2.4.0.js'></script>
+</head>
+<body>
+
+ <div id="app">
+  
+  <first></first>
+
+ </div>
+
+ <template id="one">
+ 	<div>
+ 	  <h1>这个才是真正的创建方式</h1>
+ 	  <h2>好用</h2>
+ 	</div>
+ </template>
+
+  <script type="text/javascript">
+    Vue.component('first',{
+    	template:'#one'
+    });
+
+    var vm = new Vue({
+       el: '#app',
+       data:{}
+    });
+
+  </script>
+</body>
+</html>

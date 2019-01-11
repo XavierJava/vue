@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>	
+</head>
+<body>
+  
+  <div class="app">
+  	<!-- key就是id name . val是 1 任伦 412 i是索引-->
+    <h3 v-for="(val,key,i) in user">{{key}}------>{{val}}---->{{i}}</h3>
+
+  </div>
+
+  <script type="text/javascript">
+     var vm = new Vue({
+        el : ".app",
+
+        data : {
+           user : {
+            id : 1,
+            name : "任伦",
+            grode : 412 
+           }
+        },
+
+        methods : {
+          
+        }
+
+     })
+  </script>
+</body>
+</html>

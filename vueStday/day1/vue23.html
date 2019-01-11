@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>事件修饰符</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>
+</head>
+<body>
+  <!-- 阻止冒泡行为  .stop事件修饰符-->
+
+ <!--  <div id="app" @click="fathershow">
+  	 <input type="button" value="点击" @click.stop="childshow">
+  </div> -->
+
+<!--    阻止默认行为  .prevent事件修饰符
+  <div id="app">
+  	 <a href="www.baidu.com" @click.prevent="linkClick">阻止默认跳转行为</a>
+  </div> -->
+<!-- 捕获机制从外忘里执行 .capture事件修饰符-->
+
+<!-- 只有我自身才能出触发的事件 .self事件修饰符 -->
+<!-- <div id="app" @click.self="fathershow">
+  	 <input type="button" value="点击" @click="childshow">
+  </div> -->
+  <!-- 使用.once 事件 只触发一次 -->
+  <div id="app">
+  	 <a href="www.baidu.com" @click.prevent.once="linkClick">阻止默认跳转行为</a>
+  </div> 
+  <script type="text/javascript">
+    var vm = new Vue({
+    	el : "#app",
+
+    	data : {
+
+    	},
+  
+    	methods : {
+    // 执行事件时候是先里层后外层
+         fathershow () {
+           console.log("123");
+         },
+
+         childshow () {
+           console.log("456");
+         },
+         linkClick () {
+    		console.log("123");
+    	}
+
+    	}
+
+
+    })
+  </script>
+</body>
+</html>

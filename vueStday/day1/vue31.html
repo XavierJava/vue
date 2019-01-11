@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+ <script type="text/javascript" src="./lib/vue-2.4.0.js"></script>	
+</head>
+<body>
+  
+  <div class="app">
+  	
+    <h1  :style="[ classObj1, classObj2 ]">{{msg}}</h1>
+
+  </div>
+
+  <script type="text/javascript">
+     var vm = new Vue({
+        el : ".app",
+
+        data : {
+           msg : "腰疼",
+           classObj1 : {color : 'blue' , 'font-size' : '60px'},
+           classObj2 : {'background-color' : 'red'}
+        },
+
+        methods : {
+          
+        }
+
+     })
+  </script>
+</body>
+</html>
