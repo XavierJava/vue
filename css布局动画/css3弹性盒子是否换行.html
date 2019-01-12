@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3两列布局demo</title>
+ <style type="text/css">
+   .w{width: 1000px;margin: 0 auto;}
+  *{margin: 0;padding: 0;}
+  div{
+  	border: 1px solid red;
+  }
+  ul{
+  	list-style: none;
+  	display: flex;
+    min-height: 1000px;
+    flex-wrap:wrap;
+    /*弹性盒子是否换行两个属性值wrap另一个是nowrap*/
+    align-content:stretch;
+    /*堆栈排列相对于弹性盒子是否换行有五个属性值
+    1.flex-start,flex-end,center,space-between,space-around,stretch*/
+
+  }
+  li{
+
+    width: 200px;
+    text-align: center;
+    margin: 10px;
+    background-color: yellow;
+  }
+ </style>
+</head>
+<body>
+   <div class="w">
+   	  <ul>
+   	  	<li>1</li>
+   	  	<li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>5</li>
+        <li>6</li>
+        <li>7</li>
+        <li>8</li>
+        <li>9</li>
+        <li>10</li>
+   	  </ul>
+   </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3两列布局demo</title>
+ <style type="text/css">
+   .w{width: 1000px;margin: 0 auto;}
+  *{margin: 0;padding: 0;}
+  div{
+  	border: 1px solid red;
+  }
+  ul{
+  	list-style: none;
+    /*显示：弯曲*/
+  	display: flex;
+    /*证明合法内容 ：两端对齐 这个是介绍在弹性盒子上面按照主轴方向对齐的五种方式默认flex-start*/
+  	justify-content: space-between;
+    /*这个属性一共5个属性 1.flex-start 2.flex-end center可配合margin使用 space-around每个项目的两侧间隔相等space-between两端对齐*/
+  }
+  li{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: yellow;
+  }
+ </style>
+</head>
+<body>
+   <div class="w">
+   	  <ul>
+   	  	<li>1</li>
+   	  	<li>2</li>
+        <li>3</li>
+        <li>4</li>
+   	  </ul>
+   </div>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3两列布局demo</title>
+ <style type="text/css">
+   .w{width: 1000px;margin: 0 auto;}
+  *{margin: 0;padding: 0;}
+  div{
+  	border: 1px solid red;
+  }
+  ul{
+    min-height: 400px;
+  	list-style: none;
+  	display: flex;
+    /*垂直列表：左对齐*/
+    flex-flow:row-reverse wrap;
+  }
+  li{
+    height: 200px;
+    width: 200px;
+    line-height: 200px;
+    text-align: center;
+    background-color: yellow;
+  }
+ </style>
+</head>
+<body>
+   <div class="w">
+   	  <ul>
+   	  	<li>1</li>
+   	  	<li>2</li>
+        <li>3</li>
+        <li>4</li>
+        <li>4</li>
+        <li>4</li>
+        <li>4</li>
+        <li>4</li>
+   	  </ul>
+   </div>
+</body>
+</html>

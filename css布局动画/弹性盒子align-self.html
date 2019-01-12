@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>css3两列布局demo</title>
+ <style type="text/css">
+   .w{width: 1000px;margin: 0 auto;}
+  *{margin: 0;padding: 0;}
+  div{
+  	border: 1px solid red;
+  }
+  ul{
+    height: 1000px;
+  	list-style: none;
+  	display: flex;
+    align-items:flex-start; 
+  }
+  li{
+    width: 200px;
+    height: 200px;
+    line-height: 200px;
+    text-align: center;
+    margin: 10px;
+    background-color: yellow;
+  }
+  /*flex属性的意思是在空闲的地方设置比例*/
+
+  .two{
+    align-self:center;
+    /*和父元素align-ltems属性一样有五个属性值但是可以覆盖父盒子align-ltems属性*/
+  }
+
+ </style>
+</head>
+<body>
+   <div class="w">
+   	  <ul>
+   	  	<li class="one">1</li>
+   	  	<li class="two">2</li>
+        <li class="three">3</li>
+        <li class="four">4</li>
+   	  </ul>
+   </div>
+</body>
+</html>
